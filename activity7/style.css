@@ -1,0 +1,181 @@
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("https://img.freepik.com/premium-vector/blue-floral-pattern-with-white-flowers-dark-blue-background_55610-4668.jpg") repeat center center,
+              linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  background-size: 600px, cover;
+  animation: moveBG 20s linear infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 40, 100, 0.4);
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+.container {
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffffcc;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(145, 218, 255, 0.668);
+  animation: fadeIn 1s ease-out;
+}
+
+.title-container {
+  text-align: center;
+}
+
+h1 {
+  display: inline-block;
+  color: #003366;
+  margin-bottom: 25px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.8em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(25, end);
+  border-right: none;
+}
+
+legend {
+  font-family: "Dancing Script", cursive;
+  font-weight: 800;
+  font-size: 1.2em;
+  color: #005999;
+  letter-spacing: 0.5px;
+  background-color: #eaf5ff;
+  padding: 6px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(2, 68, 114, 0.708);
+}
+
+fieldset {
+  border: none;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  background-color: #ffffffcc;
+  box-shadow: 0 4px 10px rgba(37, 97, 170, 0.659);
+  transition: transform 0.2s;
+}
+
+fieldset:hover {
+  transform: scale(1.01);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #c4e0f9;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #f5faff, #c4e0f9);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+input:focus,
+select:focus {
+  background-image: linear-gradient(to right, #ffffff 70%, #d2ebff);
+  border-color: #2c5b89;
+  outline: none;
+  animation: pulse 1.5s infinite;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-group input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #2c5b89;
+}
+
+.radio-group label {
+  font-size: 0.9em;
+  background-color: #eef7ff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #bcdffb;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #005999;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 89, 153, 0.3);
+}
+
+input[type="submit"]:hover {
+  background-color: #007acc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 89, 153, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 6px rgba(44, 91, 137, 0.4); }
+  50% { box-shadow: 0 0 12px rgba(44, 91, 137, 0.6); }
+  100% { box-shadow: 0 0 6px rgba(44, 91, 137, 0.4); }
+}
+
+@keyframes moveBG {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 50px; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}

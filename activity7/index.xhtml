@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Reservasi Hotel</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Reservasi Hotel</h1>
+
+    <form action="" method="post">
+      <fieldset>
+        <legend>Personal Data</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="telp">Telp Number</label>
+        <input type="text" id="telp" name="telp" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Reservation Room Form</legend>
+
+        <label for="res_name">Reservation Name</label>
+        <input type="text" id="res_name" name="res_name" />
+
+        <label for="booking_date">Booking Date</label>
+        <input type="date" id="booking_date" name="booking_date" />
+
+        <label for="room_type">Room Type</label>
+        <select id="room_type" name="room_type">
+          <option value="deluxe">Deluxe</option>
+          <option value="standard">Standard</option>
+        </select>
+
+        <label for="bed_type">Bed Type</label>
+        <select id="bed_type" name="bed_type">
+          <option value="single">Single Bed</option>
+          <option value="double">Double Bed</option>
+        </select>
+
+        <label>Breakfast</label>
+        <div class="radio-group">
+          <input type="radio" id="with_breakfast" name="breakfast" value="With" />
+          <label for="with_breakfast">Dengan Breakfast</label>
+
+          <input type="radio" id="without_breakfast" name="breakfast" value="Without" />
+          <label for="without_breakfast">Tanpa Breakfast</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment</legend>
+
+        <label for="check_in">Check-In date</label>
+        <input type="date" id="check_in" name="check_in" />
+
+        <label for="check_out">Check-Out date</label>
+        <input type="date" id="check_out" name="check_out" />
+
+        <label for="payment_method">Payment Method</label>
+        <select id="payment_method" name="payment_method">
+          <option value="cash">Cash</option>
+          <option value="credit_card">Card</option>
+        </select>
+      </fieldset>
+
+      <div class="btn-container">
+        <input type="submit" value="Kirim Reservasi" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>
